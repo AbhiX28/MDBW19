@@ -1,7 +1,6 @@
 #!/bin/bash
 
 echo "Mongo import process begins";
-#baseFolder="/Users/abhishekbagga/Documents/Abhi/code/MDBW19/MDBW19/src/use-case-2/legacy_data/";
 BASEPATH=`dirname $0`
 baseFolder=${BASEPATH%%/}/legacy_data/
 
