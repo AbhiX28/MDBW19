@@ -5,7 +5,7 @@ db.getCollection('abcSales').aggregate(
       "$match": {
         "saleDate": {
           "$gte": ISODate("2019-06-01T00:00:00.000Z"),
-          "$lte": ISODate("2020-06-18T00:00:00.000Z")
+          "$lte": ISODate("2019-06-18T00:00:00.000Z")
         }
       }
     },

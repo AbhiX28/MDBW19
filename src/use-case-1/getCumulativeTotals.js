@@ -8,7 +8,9 @@ db.getCollection('abcSales').mapReduce(
     };
 
     var calDate = this.saleDate;
+    // Convert date in "2019-06-02" format
     var dateInYearMonth = calDate.getFullYear() + "-" + pad(calDate.getMonth() + 1, 2, 0) + "-" + pad(calDate.getDate(), 2, 0);
+    
     emit(dateInYearMonth, 1); // Grouping data by Date
   },
 
@@ -26,7 +28,7 @@ db.getCollection('abcSales').mapReduce(
     "query": {
       "saleDate": {
         "$gte": ISODate("2019-06-01T00:00:00.000Z"),
-        "$lte": ISODate("2020-06-18T00:00:00.000Z")
+        "$lte": ISODate("2019-06-18T00:00:00.000Z")
       }
     },
     $sort: { createdDate: 1 }

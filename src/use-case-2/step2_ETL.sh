@@ -33,7 +33,7 @@ db.getCollection('sales').aggregate([{
               'then': 'Credit Card'
             }
           ],
-          'default': null
+          'default': 'Cash'
         }
       }
 
